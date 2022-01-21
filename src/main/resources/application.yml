@@ -10,7 +10,7 @@ spring:
     url: jdbc:mysql://localhost:3306/spring-boot-test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource    # 数据库连接池类别
-    druid:
+    druid:                                          # 访问URL：http://IP:端口号/druid/index.html
       initial-size: 5                               # 初始化大小
       min-idle: 10                                  # 最小连接数
       max-active: 20                                # 最大连接数
