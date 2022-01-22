@@ -9,27 +9,27 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/spring-boot-test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource    # Êı¾İ¿âÁ¬½Ó³ØÀà±ğ
-    druid:                                          # ·ÃÎÊURL£ºhttp://IP:¶Ë¿ÚºÅ/druid/index.html
-      initial-size: 5                               # ³õÊ¼»¯´óĞ¡
-      min-idle: 10                                  # ×îĞ¡Á¬½ÓÊı
-      max-active: 20                                # ×î´óÁ¬½ÓÊı
-      max-wait: 60000                               # »ñÈ¡Á¬½ÓÊ±µÄ×î´óµÈ´ıÊ±¼ä
-      min-evictable-idle-time-millis: 300000        # Ò»¸öÁ¬½ÓÔÚ³ØÖĞ×îĞ¡Éú´æµÄÊ±¼ä£¬µ¥Î»ÊÇºÁÃë
-      time-between-eviction-runs-millis: 60000      # ¶à¾Ã²Å½øĞĞÒ»´Î¼ì²âĞèÒª¹Ø±ÕµÄ¿ÕÏĞÁ¬½Ó£¬µ¥Î»ÊÇºÁÃë
-      filters: stat,wall                            # ÅäÖÃÀ©Õ¹²å¼ş£ºstat-¼à¿ØÍ³¼Æ£¬log4j-ÈÕÖ¾£¬wall-·À»ğÇ½£¨·ÀÖ¹SQL×¢Èë£©£¬È¥µôºó£¬¼à¿Ø½çÃæµÄsqlÎŞ·¨Í³¼Æ
-      validation-query: SELECT 1                    # ¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§µÄ SQLÓï¾ä£¬Îª¿ÕÊ±ÒÔÏÂÈı¸öÅäÖÃ¾ùÎŞĞ§
-      test-on-borrow: true                          # ÉêÇëÁ¬½ÓÊ±Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§£¬Ä¬ÈÏtrue£¬¿ªÆôºó»á½µµÍĞÔÄÜ
-      test-on-return: true                          # ¹é»¹Á¬½ÓÊ±Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§£¬Ä¬ÈÏfalse£¬¿ªÆôºó»á½µµÍĞÔÄÜ
-      test-while-idle: true                         # ÉêÇëÁ¬½ÓÊ±Èç¹û¿ÕÏĞÊ±¼ä´óÓÚtimeBetweenEvictionRunsMillis£¬Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§£¬Ä¬ÈÏfalse£¬½¨Òé¿ªÆô£¬²»Ó°ÏìĞÔÄÜ
+    type: com.alibaba.druid.pool.DruidDataSource    # æ•°æ®åº“è¿æ¥æ± ç±»åˆ«
+    druid:                                          # è®¿é—®URLï¼šhttp://IP:ç«¯å£å·/druid/index.html
+      initial-size: 5                               # åˆå§‹åŒ–å¤§å°
+      min-idle: 10                                  # æœ€å°è¿æ¥æ•°
+      max-active: 20                                # æœ€å¤§è¿æ¥æ•°
+      max-wait: 60000                               # è·å–è¿æ¥æ—¶çš„æœ€å¤§ç­‰å¾…æ—¶é—´
+      min-evictable-idle-time-millis: 300000        # ä¸€ä¸ªè¿æ¥åœ¨æ± ä¸­æœ€å°ç”Ÿå­˜çš„æ—¶é—´ï¼Œå•ä½æ˜¯æ¯«ç§’
+      time-between-eviction-runs-millis: 60000      # å¤šä¹…æ‰è¿›è¡Œä¸€æ¬¡æ£€æµ‹éœ€è¦å…³é—­çš„ç©ºé—²è¿æ¥ï¼Œå•ä½æ˜¯æ¯«ç§’
+      filters: stat,wall                            # é…ç½®æ‰©å±•æ’ä»¶ï¼šstat-ç›‘æ§ç»Ÿè®¡ï¼Œlog4j-æ—¥å¿—ï¼Œwall-é˜²ç«å¢™ï¼ˆé˜²æ­¢SQLæ³¨å…¥ï¼‰ï¼Œå»æ‰åï¼Œç›‘æ§ç•Œé¢çš„sqlæ— æ³•ç»Ÿè®¡
+      validation-query: SELECT 1                    # æ£€æµ‹è¿æ¥æ˜¯å¦æœ‰æ•ˆçš„ SQLè¯­å¥ï¼Œä¸ºç©ºæ—¶ä»¥ä¸‹ä¸‰ä¸ªé…ç½®å‡æ— æ•ˆ
+      test-on-borrow: true                          # ç”³è¯·è¿æ¥æ—¶æ‰§è¡ŒvalidationQueryæ£€æµ‹è¿æ¥æ˜¯å¦æœ‰æ•ˆï¼Œé»˜è®¤trueï¼Œå¼€å¯åä¼šé™ä½æ€§èƒ½
+      test-on-return: true                          # å½’è¿˜è¿æ¥æ—¶æ‰§è¡ŒvalidationQueryæ£€æµ‹è¿æ¥æ˜¯å¦æœ‰æ•ˆï¼Œé»˜è®¤falseï¼Œå¼€å¯åä¼šé™ä½æ€§èƒ½
+      test-while-idle: true                         # ç”³è¯·è¿æ¥æ—¶å¦‚æœç©ºé—²æ—¶é—´å¤§äºtimeBetweenEvictionRunsMillisï¼Œæ‰§è¡ŒvalidationQueryæ£€æµ‹è¿æ¥æ˜¯å¦æœ‰æ•ˆï¼Œé»˜è®¤falseï¼Œå»ºè®®å¼€å¯ï¼Œä¸å½±å“æ€§èƒ½
       stat-view-servlet:
-        enabled: true                               # ÊÇ·ñ¿ªÆô StatViewServlet
-        allow: 127.0.0.1                            # ·ÃÎÊ¼à¿ØÒ³Ãæ °×Ãûµ¥£¬Ä¬ÈÏ127.0.0.1
-        deny: 192.168.56.1                          # ·ÃÎÊ¼à¿ØÒ³Ãæ ºÚÃûµ¥
-        login-username: admin                       # ·ÃÎÊ¼à¿ØÒ³Ãæ µÇÂ½ÕËºÅ
-        login-password: admin                       # ·ÃÎÊ¼à¿ØÒ³Ãæ µÇÂ½ÃÜÂë
+        enabled: true                               # æ˜¯å¦å¼€å¯ StatViewServlet
+        allow: 127.0.0.1                            # è®¿é—®ç›‘æ§é¡µé¢ ç™½åå•ï¼Œé»˜è®¤127.0.0.1
+        deny: 192.168.56.1                          # è®¿é—®ç›‘æ§é¡µé¢ é»‘åå•
+        login-username: admin                       # è®¿é—®ç›‘æ§é¡µé¢ ç™»é™†è´¦å·
+        login-password: admin                       # è®¿é—®ç›‘æ§é¡µé¢ ç™»é™†å¯†ç 
       filter:
         stat:
-          enabled: true                             # ÊÇ·ñ¿ªÆô FilterStat£¬Ä¬ÈÏtrue
-          log-slow-sql: true                        # ÊÇ·ñ¿ªÆô ÂıSQL ¼ÇÂ¼£¬Ä¬ÈÏfalse
-          slow-sql-millis: 5000                     # Âı SQL µÄ±ê×¼£¬Ä¬ÈÏ 3000£¬µ¥Î»£ººÁÃë
+          enabled: true                             # æ˜¯å¦å¼€å¯ FilterStatï¼Œé»˜è®¤true
+          log-slow-sql: true                        # æ˜¯å¦å¼€å¯ æ…¢SQL è®°å½•ï¼Œé»˜è®¤false
+          slow-sql-millis: 5000                     # æ…¢ SQL çš„æ ‡å‡†ï¼Œé»˜è®¤ 3000ï¼Œå•ä½ï¼šæ¯«ç§’
