@@ -8,20 +8,18 @@
 		<version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
 	<groupId>com</groupId>
-	<artifactId>Blogs</artifactId>
+	<artifactId>blog-dao</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Blogs</name>
-
+	<name>blog-dao</name>
 	<description>Demo project for Spring Boot</description>
-
 	<properties>
 		<java.version>1.8</java.version>
+		<druid>1.2.8</druid>
+		<mysql>8.0.21</mysql>
+		<mybatis>2.1.1</mybatis>
 	</properties>
-
 	<dependencies>
-		<!-- 项目基础 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -31,6 +29,33 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com</groupId>
+			<artifactId>blog-pojo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- druid连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid}</version>
+		</dependency>
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql}</version>
+		</dependency>
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
